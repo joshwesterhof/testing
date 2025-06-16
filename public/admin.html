@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Add Flight</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 500px; margin: auto; }
+    input, select { width: 100%; margin-bottom: 10px; padding: 8px; }
+  </style>
+</head>
+<body>
+  <h2>Add a New Flight</h2>
+  <form action="/api/add-flight" method="POST">
+    <input type="password" name="password" placeholder="Admin Password" required>
+    <input type="text" name="airline" placeholder="Airline" required>
+    <input type="text" name="flight" placeholder="Flight Number" required>
+    <input type="text" name="from" placeholder="From" required>
+    <input type="text" name="to" placeholder="To" required>
+    <input type="text" name="time" placeholder="Time" required>
+    <input type="text" name="status" placeholder="Status (On Time, Delayed...)" required>
+    <select name="type" required>
+      <option value="">--Type--</option>
+      <option value="Arrival">Arrival</option>
+      <option value="Departure">Departure</option>
+    </select>
+    <button type="submit">Add Flight</button>
+  </form>
+</body>
+</html>
